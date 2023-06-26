@@ -21,7 +21,7 @@ The Nessus Scan Exporter is a Python script that allows you to export Nessus sca
 2. Install the required Python packages:
 
    ```shell
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 3. Configure the script:
@@ -63,19 +63,19 @@ The script provides the following command-line options:
 To scrape scans and store them in the database:
 
 ```
-python scraper.py --scrape-data
+python3 main.py --scrape-data
 ```
 
 To clean up the database:
 
 ```
-python scraper.py --cleanup-db
+python3 main.py --cleanup-db
 ```
 
 To remove a specific record from the database, provide the file name:
 
 ```
-python scraper.py --remove-record FILE_NAME
+python3 main.py --remove-record FILE_NAME
 ```
 
 Replace `FILE_NAME` with the name of the record you want to remove.
