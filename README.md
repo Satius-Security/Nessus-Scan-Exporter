@@ -39,7 +39,7 @@ After running the script, the exported Nessus scan files will be stored in the s
 
 ```
 nessus-scan-scraper/
-├── scraper.py
+├── main.py
 ├── BaseURL
 ├── APIkeysFile
 ├── requirements.txt
