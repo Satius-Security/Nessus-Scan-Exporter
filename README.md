@@ -1,7 +1,6 @@
-
 # Nessus Scan Exporter
 
-The Nessus Scan Exporter is a Python script that allows you to export Nessus scans from the Nessus API, download the scan files, and store them in a designated folder. This script can provide an automated solution to keep your scan data up to date and enables integration with other security systems or processes.
+The Nessus Scan Exporter is a Python script that allows you to export Nessus scans from the Nessus API, download the scan files, and store them in a designated folder. This script can provide an automated solution to export your scan data and enable integration with other security solutions.
 
 
 ### Prerequisites
@@ -31,7 +30,7 @@ The Nessus Scan Exporter is a Python script that allows you to export Nessus sca
 
 ### Scheduled Export of Nessus Scans
 
-You can schedule the script to run periodically using a task scheduler or cron job. By running the script at specified intervals, you can automate the process of exporting Nessus scans, downloading the scan files, and storing them in a designated folder. This ensures that your scan data is always up to date and available for further analysis or integration with other security systems.
+You can schedule the script to run periodically using task scheduler or cron job. By running the script at specified intervals, you can automate the process of exporting Nessus scans, downloading the scan files, and storing them in a designated folder. This ensures that your scan data is available for further analysis or integration with other security systems.  
 
 ### Folder Structure
 
