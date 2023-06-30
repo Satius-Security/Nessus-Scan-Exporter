@@ -56,11 +56,11 @@ nessus-scan-scraper/
 
 The script provides the following command-line options:
 
-- `--scrape-data`: Scrape scans and store them in the database.
+- `--scrape-data`: Scrape scans and track the progress in the database.
 - `--cleanup-db`: Clean up the database.
-- `--remove-record FILE_NAME`: Remove a specific record from the database.
+- `--remove-record FILE_NAME`: Remove a specific record from the database to reimport the scan file.
 
-To scrape scans and store them in the database:
+To scrape scans and store the progress in database:
 
 ```
 python3 main.py --scrape-data
@@ -95,7 +95,7 @@ Once the Nessus scan files are exported, you can integrate them with other secur
 Please refer to the documentation of your specific security system or consult with your security team for guidance on how to integrate the exported Nessus scan files into your existing security infrastructure.
 ## About
 
-This script was developed by Saleh Al Tarawneh under [Satius Security](https://www.satiussecurity.com/). It provides a convenient way
+This script was developed by Saleh Al Tarawneh under [Satius Security](https://www.satius.io/). It provides a convenient way
 
  to export Nessus scans, download the scan files, and store them for further analysis or integration with other security systems.
 
