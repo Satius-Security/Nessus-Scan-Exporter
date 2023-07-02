@@ -21,7 +21,7 @@ payloadRequestExport = {"format": "nessus"}
 requests.packages.urllib3.disable_warnings()
 
 
-def scrape_scans():
+def export_scans():
     # Read API keys from file
     with open('APIkeysFile', 'r') as file:
         APIkeys = file.read().strip()
@@ -147,16 +147,16 @@ def remove_record(file_name):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Nessus Scan Scraper')
-    parser.add_argument('--scrape-data', action='store_true', help='Scrape scans and store them in the database')
+    parser = argparse.ArgumentParser(description='Nessus Scan Exporter')
+    parser.add_argument('--export-data', action='store_true', help='Export scans and store them in the database')
     parser.add_argument('--cleanup-db', action='store_true', help='Clean up the database')
     parser.add_argument('--remove-record', type=str, metavar='FILE_NAME',
                         help='Remove a specific record from the database')
 
     args = parser.parse_args()
 
-    if args.scrape_data:
-        scrape_scans()
+    if args.export_data:
+        export_scans()
     elif args.cleanup_db:
         clean_up_database()
     elif args.remove_record:
