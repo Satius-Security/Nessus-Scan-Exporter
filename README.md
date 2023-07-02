@@ -6,7 +6,7 @@ The Nessus Scan Exporter is a Python script that allows you to export Nessus sca
 ### Prerequisites
 
 - Python 3.x
-- Required Python packages: `requests`, `sqlite3`
+- Required Python packages: `requests`
 - Nessus API access and API keys
 
 ### Installation
@@ -25,8 +25,8 @@ The Nessus Scan Exporter is a Python script that allows you to export Nessus sca
 
 3. Configure the script:
 
-   - Edit a file named `BaseURL` and add the base URL of your Nessus API endpoint.
-   - Edit a file named `APIkeysFile` and add your Nessus API keys.
+   - Edit a file named `config.ini` and add the base URL of your Nessus API endpoint and the API key.
+
 
 ### Scheduled Export of Nessus Scans
 
@@ -37,7 +37,7 @@ You can schedule the script to run periodically using task scheduler or cron job
 After running the script, the exported Nessus scan files will be stored in the specified folder. The folder structure will look as follows:
 
 ```
-nessus-scan-scraper/
+nessus-scan-exporter/
 ├── main.py
 ├── BaseURL
 ├── APIkeysFile
@@ -55,14 +55,14 @@ nessus-scan-scraper/
 
 The script provides the following command-line options:
 
-- `--scrape-data`: Scrape scans and track the progress in the database.
+- `--export-data`: Scrape scans and track the progress in the database.
 - `--cleanup-db`: Clean up the database.
 - `--remove-record FILE_NAME`: Remove a specific record from the database to reimport the scan file.
 
 To scrape scans and store the progress in database:
 
 ```
-python3 main.py --scrape-data
+python3 main.py --export-data
 ```
 
 To clean up the database:
