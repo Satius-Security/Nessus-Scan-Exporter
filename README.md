@@ -39,8 +39,7 @@ After running the script, the exported Nessus scan files will be stored in the s
 ```
 nessus-scan-exporter/
 ├── main.py
-├── BaseURL
-├── APIkeysFile
+├── config.ini
 ├── requirements.txt
 ├── logs/
 │   └── script.log
