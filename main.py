@@ -5,26 +5,28 @@ import logging
 import argparse
 from datetime import datetime
 import time
+import configparser
 
 # Set up logging
 logs_folder = 'logs'
 os.makedirs(logs_folder, exist_ok=True)
 log_file = os.path.join(logs_folder, 'script.log')
 logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-with open('BaseURL', 'r') as file:
-    BaseURL = file.read().strip()
+
+# Read config file
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+baseUrl = config.get('CONFIG', 'baseURL')
+APIkeys = config.get('CONFIG', 'APIkeys')
 
 scan_id = None
-baseUrl = BaseURL
 scans = '/scans'
 payloadRequestExport = {"format": "nessus"}
 requests.packages.urllib3.disable_warnings()
 
 
 def export_scans():
-    # Read API keys from file
-    with open('APIkeysFile', 'r') as file:
-        APIkeys = file.read().strip()
 
     APIkeysHeader = {
         'X-ApiKeys': APIkeys
